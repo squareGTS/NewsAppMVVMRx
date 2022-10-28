@@ -9,10 +9,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct ArticleListViewModel {
-    let articlesVM: [ArticleViewModel]
-}
-
 struct ArticleViewModel {
     let article: Article
 
@@ -29,6 +25,10 @@ extension ArticleViewModel {
     var description: Observable<String> {
         return Observable<String>.just(article.description ?? "")
     }
+}
+
+struct ArticleListViewModel {
+    let articlesVM: [ArticleViewModel]
 }
 
 extension ArticleListViewModel {
